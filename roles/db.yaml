@@ -1,0 +1,5 @@
+- name: configuration DB server 
+  hosts: db 
+  become: yes 
+  roles:
+  - db 
