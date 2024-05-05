@@ -19,7 +19,7 @@
   - name: run app pre-requisites
     ansible.builtin.import_role:
       name: comman  
-	  tasks_from: app-pre-req
+	    tasks_from: app-pre-req
 
   - name: install npm dependencies
     ansible.builtin.command: npm install
