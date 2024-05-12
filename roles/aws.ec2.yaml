@@ -7,6 +7,6 @@ keyed_groups:
     parent_group: ""
 
 filters:
-   tags:Name: "Backend"
+   tags:Name: "backend"
 compose:
    ansible_host: private_ip_address
