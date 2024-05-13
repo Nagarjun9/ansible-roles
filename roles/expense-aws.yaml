@@ -1,0 +1,15 @@
+- name: creat ec2 and r53 records
+  hosts: localhost
+  tasks:
+  - name: create ec2 instances 
+    ansible.aws.ec2_instance:
+	  instance_type: t2.micro 
+	  name: "{{ item }}"
+	  security_group: allow-everything   #my security group 
+	  image_id: ami-090252cbe067a9e58        # we need give over ami id 
+	  tags:
+	    Name: "{{ item }}"   # name will set over instanceeq
+	 loop:
+	 - db 
+	 - backend 
+	 - frontend 
